@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Please add you comment</h1>
-    <div>
+    <div id="comment-container">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae
         iste modi voluptate vero nisi accusamus provident alias consectetur
@@ -45,7 +45,15 @@
         .addEventListener("click", function () {
           //step-2   get the comment
           const commentBox = document.getElementById("new-comment");
-          console.log(commentBox);
+          const newComment = commentBox.value;
+
+          //   step-3 set the comment inside the comment container
+
+          const commentContainer = document.getElementById("comment-container");
+          const paragraph = document.createElement("p");
+          paragraph.innerText = newComment;
+          commentContainer.appendChild(paragraph);
+          commentBox.value = "";
         });
     </script>
   </body>
