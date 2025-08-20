@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <button id="btn-mouse">Mouse Mike</button>
+    <input type="text" name="" id="user-name" placeholder="Your Name" />
+    <input type="text" name="" id="user-email" placeholder="Your Email" />
+    <script>
+      document
+        .getElementById("user-name")
+        .addEventListener("keyup", function (e) {
+          console.log("Your writing done.", e.target.value);
+        });
+    </script>
+  </body>
+</html>
